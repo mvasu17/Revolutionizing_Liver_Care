@@ -1,6 +1,6 @@
 # 🩺 Liver Cirrhosis Prediction Web App
 
-A full-stack machine learning web application to **predict liver cirrhosis risk** based on 44 clinical features. The goal is to assist healthcare professionals and patients in the **early detection** of liver cirrhosis using a trained Random Forest model.
+A full-stack machine learning web application to **predict liver cirrhosis risk** based on 36 clinical features. The goal is to assist healthcare professionals and patients in the **early detection** of liver cirrhosis using a trained Random Forest model.
 
 ---
 
@@ -48,7 +48,7 @@ Liver Cirrhosis is a chronic disease that causes irreversible damage to the live
 
 ## 🚀 Features
 
-- 🔍 Accepts **44 medical input features**
+- 🔍 Accepts **36 medical input features**
 - 🔁 Uses a **pre-trained Random Forest model**
 - 📉 Normalizes data using **L1 Normalizer**
 - 🧠 Makes real-time predictions
@@ -109,9 +109,9 @@ Accepts form data from HTML and returns:
 🖥️ UI Screens
 ✅ intro.html: Overview, prevention, and importance of detection
 
-✍️ index.html: Form to enter 44 inputs
+✍️ index.html: Form to enter 36 inputs
 
-📊 result.html: Animated result display
+📊 result.html: Result display
 
 🎨 Styled with style.css in /static
 
