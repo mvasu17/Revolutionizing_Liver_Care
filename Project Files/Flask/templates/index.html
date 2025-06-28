@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Liver Cirrhosis Predictor</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Enter Patient Details</h2>
+
+      <form action="/predict" method="POST">
+        <!-- Example of fields -->
+        <label>Age</label>
+        <input type="number" name="Age" required />
+
+        <label>Gender (0=Male, 1=Female)</label>
+        <input type="number" name="Gender" min="0" max="1" step="1" required />
+
+        <label>Duration of Alcohol Consumption (Years)</label>
+        <input
+          type="number"
+          name="Duration of alcohol consumption(years)"
+          required
+        />
+
+        <label>Quantity of Alcohol (Quarters/Day)</label>
+        <input
+          type="number"
+          name="Quantity of alcohol consumption (quarters/day)"
+          required
+        />
+
+        <label>Hepatitis B Infection (No(0) / Yes(1))</label>
+        <input
+          type="number"
+          name="Hepatitis B infection"
+          min="0"
+          max="1"
+          step="1"
+          required
+        />
+
+        <label>Hepatitis C Infection (No(0) / Yes(1))</label>
+        <input
+          type="number"
+          name="Hepatitis C infection"
+          min="0"
+          max="1"
+          step="1"
+          required
+        />
+
+        <label>Diabetes (No(0) / Yes(1))</label>
+        <input
+          type="number"
+          name="Diabetes Result"
+          min="0"
+          max="1"
+          step="1"
+          required
+        />
+
+        <label>Obesity (No(0) / Yes(1))</label>
+        <input type="number" name="Obesity" min="0" max="1" step="1" required />
+
+        <label>Family History of Cirrhosis (No(0) / Yes(1))</label>
+        <input
+          type="number"
+          name="Family history of cirrhosis/ hereditary"
+          min="0"
+          max="1"
+          step="1"
+          required
+        />
+
+        <!-- Add all other fields similarly -->
+        <label>TCH</label>
+        <input type="number" name="TCH" step="0.01" />
+
+        <label>TG</label>
+        <input type="number" name="TG" step="0.01" />
+
+        <label>LDL</label>
+        <input type="number" name="LDL" step="0.01" />
+
+        <label>HDL</label>
+        <input type="number" name="HDL" step="0.01" />
+
+        <label>Hemoglobin (g/dl)</label>
+        <input type="number" name="Hemoglobin  (g/dl)" step="0.01" />
+
+        <label>PCV (%)</label>
+        <input type="number" name="PCV  (%)" step="0.01" />
+
+        <label>MCV (femtoliters/cell)</label>
+        <input type="number" name="MCV   (femtoliters/cell)" step="0.01" />
+
+        <label>Total Count</label>
+        <input type="number" name="Total Count" step="0.01" />
+
+        <label>Polymorphs (%)</label>
+        <input type="number" name="Polymorphs  (%)" step="0.01" />
+
+        <label>Lymphocytes (%)</label>
+        <input type="number" name="Lymphocytes  (%)" step="0.01" />
+
+        <label>Monocytes (%)</label>
+        <input type="number" name="Monocytes   (%)" step="0.01" />
+
+        <label>Eosinophils (%)</label>
+        <input type="number" name="Eosinophils   (%)" step="0.01" />
+
+        <label>Basophils (%)</label>
+        <input type="number" name="Basophils  (%)" step="0.01" />
+
+        <label>Platelet Count (lakhs/mm)</label>
+        <input type="number" name="Platelet Count  (lakhs/mm)" step="0.01" />
+
+        <label>Total Bilirubin (mg/dl)</label>
+        <input type="number" name="Total Bilirubin    (mg/dl)" step="0.01" />
+
+        <label>Direct (mg/dl)</label>
+        <input type="number" name="Direct    (mg/dl)" step="0.01" />
+
+        <label>Indirect (mg/dl)</label>
+        <input type="number" name="Indirect     (mg/dl)" step="0.01" />
+
+        <label>Total Protein (g/dl)</label>
+        <input type="number" name="Total Protein     (g/dl)" step="0.01" />
+
+        <label>Albumin (g/dl)</label>
+        <input type="number" name="Albumin   (g/dl)" step="0.01" />
+
+        <label>Globulin (g/dl)</label>
+        <input type="number" name="Globulin  (g/dl)" step="0.01" />
+
+        <label>A/G Ratio</label>
+        <input type="number" name="A/G Ratio" step="0.01" />
+
+        <label>AL.Phosphatase (U/L)</label>
+        <input type="number" name="AL.Phosphatase      (U/L)" step="0.01" />
+
+        <label>SGOT/AST (U/L)</label>
+        <input type="number" name="SGOT/AST      (U/L)" step="0.01" />
+
+        <label>SGPT/ALT (U/L)</label>
+        <input type="number" name="SGPT/ALT (U/L)" step="0.01" />
+
+        <label>USG Abdomen (0=No, 1=Yes)</label>
+        <input
+          type="number"
+          name="USG Abdomen (diffuse liver or  not)"
+          min="0"
+          max="1"
+          step="1"
+        />
+       
+
+        <label>BP Systolic</label>
+        <input type="number" name="BP_Systolic" />
+
+        <label>BP Diastolic</label>
+        <input type="number" name="BP_Diastolic" />
+
+        <input type="submit" value="Predict" />
+        
+        <a href="{{ url_for('intro') }}" class="button-link">← Back to Intro</a>
+      </form>
+      
+       
+   
+  </body>
+</html>

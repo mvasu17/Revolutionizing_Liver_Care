@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container result-container">
+    <h2>Prediction Result:</h2>
+    <p>{{ prediction }}</p>
+    
+    <!-- Back to Prediction Form -->
+    <a href="{{ url_for('index') }}" class="button-link">🔁 Try Again</a>
+
+    <!-- Back to Intro Page -->
+    <a href="{{ url_for('intro') }}" class="button-link">← Back to Intro</a>
+  </div>
+</body>
+</html>

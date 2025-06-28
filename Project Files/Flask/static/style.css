@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: url('demo2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f0f0f0;
+    animation: fadeIn 1.5s ease-in-out;
+    position: relative;
+    z-index: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+
+.result-container p {
+    font-size: 1.6rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 12px;
+    color: #ffffff;
+   
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #00ffd0;
+    margin-bottom: 20px;
+    text-shadow: 0 0 12px #00ffd0;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #00ffd0;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #00ffa6;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+input[type="submit"],
+.button-link {
+    margin-top: 25px;
+    padding: 14px 28px;
+    background-color: #00bfa6;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 0 15px #00ffd0;
+    
+}
+
+input[type="submit"]:hover,
+.button-link:hover {
+    background-color: #28f59c;
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #00ffd0;
+}
+
+@media (max-width: 768px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #00ffd0;
+}
+
+.card h3 {
+    color: #00ffd0;
+    margin-bottom: 10px;
+}
+
+.card ul {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
